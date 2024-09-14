@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+::-webkit-scrollbar {
+  width: 6px;
+  /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #e3e4e6;
+  /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #EF567B;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 1px solid #EF567B;
+  /* creates padding around scroll thumb */
+}
+body {
+  color: rgb(var(--foreground-rgb));
+  font-size: 12px;
+}
+select {
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none;    /* For Firefox */
+  appearance: none;         /* For modern browsers */
+  border: 1px solid #ccc;  /* Optional: Add border */
+  padding: 10px;           /* Optional: Add padding */
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...') no-repeat right; /* Custom image */
+  background-size: 10px;   /* Size of the background image */
+}
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center; /* Center the pagination */
+}
+
+.page-item {
+  margin: 0 5px;
+}
+p{
+  text-indent: 1vi;
+}
+.page-link {
+  padding: 8px 12px;
+  border: 1px solid #0070f3;
+  color: #0070f3;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 9999px;
+  /* box-shadow: 1px 1px 2px 2px rgb(0, 0,0, 0.3); */
+}
+
+.page-link:hover {
+  background-color: #f0f0f0; /* Change background on hover */
+}
+
+.active .page-link {
+  background-color: #0070f3; /* Active page style */
+  color: white;
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
